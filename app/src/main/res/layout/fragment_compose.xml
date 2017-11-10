@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/ibClose"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:longClickable="false"
+        android:src="@drawable/close"
+        android:background="#f2f2f2" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivProfileImageFragment"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvUsernameFragment"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/ivProfileImageFragment"
+        android:layout_toStartOf="@+id/ivProfileImageFragment" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/tvScreenNameFragment"
+        android:textColor="#c0bcbc"
+        android:layout_below="@+id/tvUsernameFragment"
+        android:layout_toLeftOf="@+id/ivProfileImageFragment"
+        android:layout_toStartOf="@+id/ivProfileImageFragment" />
+
+        <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tweet_button"
+        android:id="@+id/button"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:enabled="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCountText"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button"
+        android:layout_marginRight="10dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scroll"
+            android:layout_below="@+id/ivProfileImageFragment"
+            android:fillViewport="false"
+            android:layout_alignParentBottom="false"
+            android:layout_above="@+id/button">
+
+            <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/edtCompose"
+            android:gravity="top"
+            android:hint="What are you thinking ?"
+                android:layout_below="@+id/ivProfileImageFragment"
+                android:layout_marginTop="25dp"
+                android:elegantTextHeight="false"
+                android:lines="18" />
+        </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>
